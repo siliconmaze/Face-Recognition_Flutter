@@ -145,8 +145,19 @@ https://pusher.com/tutorials/facial-recognition-react-native might help with som
 https://www.altexsoft.com/blog/datascience/comparing-machine-learning-as-a-service-amazon-microsoft-azure-google-cloud-ai-ibm-watson/
 scroll down to see what is on offer my Azur for fiacial is vs table.
 
-Person face identificsion (person face recog)  is provied by AWS and Azure, not GCP,so it looks I will need to resort to Azure me thinks?
+Person face identificaton (person face recog)  is provied by AWS and Azure, not GCP,so it looks I will need to resort to Azure me thinks?
 
+I found this:
+
+https://pub.dev/packages/cognitive_services
+
+Send image to cognitive services:
+https://stackoverflow.com/questions/53151504/flutter-how-to-http-post-image-to-microsoft-cognitive-services
+
+Current Goal:
+Take image with camera, then comapre to previously select image.
+
+Then liveness Checking:
 
 
 
