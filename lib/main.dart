@@ -1,4 +1,3 @@
-
 /*
  * Created by Rishit Dagli on 2/13/20 1:25 PM
  * Copyright (c) 2020.
@@ -25,14 +24,14 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 void main() => runApp(
-  MaterialApp(
-    title: 'Face Recognition',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-    ),
-    home: FacePage(),
-  ),
-);
+      MaterialApp(
+        title: 'Steve\'s Face Recognition App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: FacePage(),
+      ),
+    );
 
 class FacePage extends StatefulWidget {
   @override
@@ -46,19 +45,18 @@ class _FacePageState extends State<FacePage> {
   ui.Image _image;
 
   _getImageAndDetectFaces() async {
-    final imageFile = await ImagePicker.pickImage(
-        source: ImageSource.gallery
-    );
+    final imageFile = await ImagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
       isLoading = true;
     });
     final image = FirebaseVisionImage.fromFile(imageFile);
     final faceDetector = FirebaseVision.instance.faceDetector(
-      FaceDetectorOptions(
-        mode: FaceDetectorMode.fast,
-        enableLandmarks: true
-      )
-    );
+        FaceDetectorOptions(
+            mode: FaceDetectorMode.fast,
+            enableLandmarks: true,
+            enableClassification: true,
+            enableContours: true,
+            enableTracking: true));
     List<Face> faces = await faceDetector.processImage(image);
     if (mounted) {
       setState(() {
@@ -72,7 +70,7 @@ class _FacePageState extends State<FacePage> {
   _loadImage(File file) async {
     final data = await file.readAsBytes();
     await decodeImageFromList(data).then(
-          (value) => setState(() {
+      (value) => setState(() {
         _image = value;
         isLoading = false;
       }),
@@ -85,18 +83,18 @@ class _FacePageState extends State<FacePage> {
       body: isLoading
           ? Center(child: CircularProgressIndicator())
           : (_imageFile == null)
-          ? Center(child: Text('No image selected'))
-          : Center(
-        child: FittedBox(
-          child: SizedBox(
-            width: _image.width.toDouble(),
-            height: _image.height.toDouble(),
-            child: CustomPaint(
-              painter: FacePainter(_image, _faces),
-            ),
-          ),
-        ),
-      ),
+              ? Center(child: Text('No image selected'))
+              : Center(
+                  child: FittedBox(
+                    child: SizedBox(
+                      width: _image.width.toDouble(),
+                      height: _image.height.toDouble(),
+                      child: CustomPaint(
+                        painter: FacePainter(_image, _faces),
+                      ),
+                    ),
+                  ),
+                ),
       floatingActionButton: FloatingActionButton(
         onPressed: _getImageAndDetectFaces,
         tooltip: 'Pick Image',
@@ -114,6 +112,12 @@ class FacePainter extends CustomPainter {
   FacePainter(this.image, this.faces) {
     for (var i = 0; i < faces.length; i++) {
       rects.add(faces[i].boundingBox);
+
+      //SteveR: My Added Testing Code:
+      print("leftEyeOpenProbability=" +
+          faces[i].leftEyeOpenProbability.toString());
+      print("Contours=" +
+          faces[i].getContour(FaceContourType.face).positionsList.toString());
     }
   }
 

@@ -1,0 +1,64 @@
+ 
+ this is one phot of me from google drive me-cropped-portal-zinzai.jpg
+
+
+ Contours=[Offset(1057.1, 412.2), 
+ Offset(1110.7, 414.1), 
+ Offset(1205.9, 426.8), 
+ Offset(1269.3, 451.1), 
+ Offset(1310.4, 492.8), 
+ Offset(1340.1, 542.8), 
+ Offset(1351.9, 597.9), 
+ Offset(1357.5, 663.6), 
+ Offset(1356.8, 729.2), 
+ Offset(1353.1, 795.6), 
+ Offset(1343.6, 864.8), 
+ Offset(1324.1, 934.9), 
+ Offset(1296.1, 992.9), 
+ Offset(1264.9, 1034.2), 
+ Offset(1227.1, 1074.7), 
+ Offset(1191.3, 1102.4), 
+ Offset(1152.6, 1125.1), 
+ Offset(1098.7, 1141.5), 
+ Offset(1056.1, 1146.8), 
+ Offset(1012.9, 1143.1), 
+ Offset(957.9, 1129.4), 
+ Offset(917.3, 1108.4), Offset(879.3, 1082.1), Offset(839.5, 1042.4), 
+ Offset(805.7, 1001.7), Offset(775.5, 942.1), Offset(756.3, 872.5), Offset(747.0, 803.1), 
+ Offset(742.6, 736.3), Offset(741.1, 671.4), Offset(747.4, 607.0), Offset(761.2, 549.4), Offset(794.2, 496.5), 
+ Offset(838.6, 453.6), Offset(905.4, 428.1), Offset(1003.0, 414.5)]
+
+ =====
+
+ vs
+
+Another photo of me stever=hedshot-august-2019.jpg
+
+
+Contours=[Offset(1002.3, 582.7), 
+Offset(1084.5, 584.0), 
+Offset(1232.2, 601.9), 
+Offset(1332.9, 639.7), 
+Offset(1401.0, 703.8), 
+Offset(1453.1, 783.4), 
+Offset(1477.2, 868.0), 
+Offset(1491.4, 966.1), 
+Offset(1495.1, 1063.3), 
+Offset(1493.6, 1163.5), 
+Offset(1483.6, 1268.3), 
+Offset(1457.4, 1374.0), 
+Offset(1414.8, 1460.8), Offset(1365.1, 1519.2), Offset(1304.9, 1578.4), Offset(1247.7, 1618.5), Offset(1185.5, 1650.9), Offset(1099.4, 1675.3), 
+Offset(1031.1, 1684.1), Offset(962.5, 1680.1), Offset(875.0, 1661.9), Offset(811.0, 1634.0), Offset(750.4, 1598.9), 
+Offset(685.8, 1544.2), Offset(632.5, 1488.4), Offset(584.3, 1404.4), Offset(552.5, 1298.7), Offset(536.9, 1193.9), 
+Offset(529.9, 1094.7), Offset(527.3, 999.3), Offset(536.8, 901.5), Offset(556.6, 813.8), Offset(605.8, 729.1), Offset(672.5, 660.3), Offset(773.1, 615.4), 
+Offset(920.2, 588.7)]
+
+
+====
+
+We can see that we woul dnot apply an algorythm to match the face countours, I am going to see if we can do this in flutter, React Native or Native?
+
+
+
+
+
