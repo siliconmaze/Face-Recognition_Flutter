@@ -138,6 +138,15 @@ A Flutter plugin to use the capabilities of Firebase ML, which includes all of F
 
 I guess for me, I need to take: `https://github.com/flutter/plugins/tree/master/packages/camera` abd work out how I can use the flutter camera plugin to get the stream, and match to the static image.
 
+For me I have learned that at the moment Google is limited in Facial recognition. they do not yet provide services that allow you to recognise a face from a pre captures image of that same face ie compare facial images with live camera etc.
+
+https://pusher.com/tutorials/facial-recognition-react-native might help with some ideas?
+
+https://www.altexsoft.com/blog/datascience/comparing-machine-learning-as-a-service-amazon-microsoft-azure-google-cloud-ai-ibm-watson/
+scroll down to see what is on offer my Azur for fiacial is vs table.
+
+Person face identificsion (person face recog)  is provied by AWS and Azure, not GCP,so it looks I will need to resort to Azure me thinks?
+
 
 
 
